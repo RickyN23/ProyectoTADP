@@ -1,12 +1,26 @@
-*.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+public class ProyectoTADP extends JFrame {
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+    public ProyectoTADP() {
+
+        add(new JButton("East"), BorderLayout.EAST);
+        add(new JButton("South"), BorderLayout.SOUTH);
+        add(new JButton("West"), BorderLayout.WEST);
+        add(new JButton("North"), BorderLayout.NORTH);
+        add(new JButton("Center"), BorderLayout.CENTER);
+    }//ProyectoTADP
+
+    public static void main(String[] args) {
+        ProyectoTADP frame = new ProyectoTADP();
+        frame.setTitle("ShowBorderLayout");
+        frame.setSize(300, 200);
+        frame.setLocationRelativeTo(null); // Center the frame 
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }//main
+}//class
+
